@@ -1,10 +1,79 @@
 {
-  "users": [
-    { "id": 1, "name": "John", "email": "john@example.com" },
-    { "id": 2, "name": "Jane", "email": "jane@example.com" }
+  "license": {
+    "application_number": "001",
+    "customer_name": "أحمد علي",
+    "application_image": "file.png",
+    "commercial_registration_image": "file2.png"
+  },
+  "property": {
+    "rent_start_date": "2025-06-01",
+    "rent_end_date": "2025-12-31",
+    "rent_value": "7000",
+    "currency_id": 1
+  },
+  "additional": {
+    "address": "شارع التحرير",
+    "employee_number": "5",
+    "panel_type_id": 2
+  },
+
+  
+  "categories": [
+    { "id": 1, "name": "اشغال" },
+    { "id": 2, "name": "تقافة" },
+    { "id": 3, "name": "صحة" },
+    { "id": 4, "name": "سياحة" }
   ],
-  "posts": [
-    { "id": 1, "title": "Post 1", "body": "This is post 1" },
-    { "id": 2, "title": "Post 2", "body": "This is post 2" }
+  "sub_categories": [
+    {
+      "id": 1,
+      "name": "رخصة مزاولة مهنة",
+      "category_id": 1,
+      "category_name": "اشغال"
+    },
+    {
+      "id": 2,
+      "name": "رخصة مزاولة مهنة يدوي",
+      "category_id": 1,
+      "category_name": "اشغال"
+    },
+    {
+      "id": 3,
+      "name": "رخصة ثقافية 1",
+      "category_id": 2,
+      "category_name": "تقافة"
+    },
+    {
+      "id": 4,
+      "name": "رخصة ثقافية 2",
+      "category_id": 2,
+      "category_name": "تقافة"
+    },
+    {
+      "id": 5,
+      "name": "رخصة صحية 1",
+      "category_id": 3,
+      "category_name": "صحة"
+    },
+    {
+      "id": 6,
+      "name": "رخصة صحية 2",
+      "category_id": 3,
+      "category_name": "صحة"
+    },
+    {
+      "id": 7,
+      "name": "رخصة سياحية 1",
+      "category_id": 4,
+      "category_name": "سياحة"
+    },
+    {
+      "id": 8,
+      "name": "رخصة سياحية 2",
+      "category_id": 4,
+      "category_name": "سياحة"
+    }
   ]
 }
+
+

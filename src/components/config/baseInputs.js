@@ -90,6 +90,31 @@ export const baseInputs = {
     required: true,
     grid: "md:col-span-6",
   },
+
+
+
+  // === بيانات سياحة ===
+  tourism_start_date: {
+    name: "tourism_start_date",
+    label: "بداية السياحة",
+    type: "date",
+    required: true,
+    grid: "md:col-span-6",
+  },
+  tourism_end_date: {
+    name: "tourism_end_date",
+    label: "نهاية السياحة",
+    type: "date",
+    required: true,
+    grid: "md:col-span-6",
+  },
+  tourism_value: {
+    name: "tourism_value",
+    label: "قيمة السياحة",
+    type: "text",
+    required: true,
+    grid: "md:col-span-6",
+  },
 };
 
 

@@ -21,10 +21,10 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     backgroundColor: "#fff",
-    padding: "2px 16px",
+    padding: 4,
     direction: "rtl",
     fontFamily: "Cairo",
-    fontSize: 7,
+    fontSize: 8,
   },
 
   header: {
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   leftSide: {
     flexDirection: "row-reverse",
     alignItems: "center",
-    // flex: 1,
+    flex: 1,
     justifyContent: "flex-end",
     gap: 4,
   },
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   rightSide: {
     flexDirection: "row-reverse",
     alignItems: "center",
-    // flex: 1,
+    flex: 1,
     justifyContent: "flex-start",
   },
 
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const StopActivityRequest = ({ formNumber }) => {
+const StopActivityRequest = () => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
@@ -256,10 +256,12 @@ const StopActivityRequest = ({ formNumber }) => {
           {/* Left */}
           <View style={{ textAlign: "center", flex: 1 }}>
             <Text style={styles.headerText}>الجمهورية اليمنية</Text>
-            <Text>مكتب الاشغال العامه و الطرق مدريه المنصوره</Text>
+            <Text>
+              مكتب الاشغال العامه و الطرق مدريه المنصوره
+            </Text>
 
             <Text style={styles.headerSubtext}>
-              رقم الاستماره : {formNumber}
+              رقم الاستماره : 89892
             </Text>
             <Text style={styles.headerSubtext}>التاريخ : 01/01/2026</Text>
           </View>
@@ -286,16 +288,38 @@ const StopActivityRequest = ({ formNumber }) => {
         </View>
 
         {/* العنوان الرئيسي */}
-        <Text style={styles.title}>طلب ايقاف نشاط</Text>
+        <Text style={styles.title}>طلب للحصول على ترخيص فتح محل أو تجديده</Text>
         <Text style={styles.subtitle}>
-          {"LICENCE CANCEL APPLICATION".toUpperCase()}
+          {"APPLICATION FOR LICENCE OR RENEWAL".toUpperCase()}
         </Text>
 
         <View>
-          <View style={styles.flexBetween}>
-            <View style={[styles.flex, { flex: 1 }]}>
-              <Text>: رقم اخر تجديد </Text>
-              <View style={styles.formLine} />
+          <View style={styles.formRow}>
+            {/* الجزء الأيمن */}
+            <View style={styles.rightSide}>
+              <Text style={styles.label}>:نوع الطلب</Text>
+
+              <View style={styles.checkboxGroup}>
+                <View style={styles.checkItem}>
+                  <View style={styles.checkbox} />
+                  <Text style={styles.checkboxLabel}>جديد</Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <View style={styles.checkbox} />
+                  <Text style={styles.checkboxLabel}>تجديد</Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <View style={styles.checkbox} />
+                  <Text style={styles.checkboxLabel}>مركز رئيسي</Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <View style={styles.checkbox} />
+                  <Text style={styles.checkboxLabel}>فرع</Text>
+                </View>
+              </View>
             </View>
 
             {/* الجزء الأيسر */}
@@ -320,27 +344,10 @@ const StopActivityRequest = ({ formNumber }) => {
                 <Text>م</Text>
               </View>
             </View>
-
-            {/* الجزء الأيمن */}
-            <View style={styles.rightSide}>
-              <Text style={styles.label}>:نوع اخر تجديد</Text>
-
-              <View style={styles.checkboxGroup}>
-                <View style={styles.checkItem}>
-                  <View style={styles.checkbox} />
-                  <Text style={styles.checkboxLabel}>الي</Text>
-                </View>
-
-                <View style={styles.checkItem}>
-                  <View style={styles.checkbox} />
-                  <Text style={styles.checkboxLabel}>يدوي</Text>
-                </View>
-              </View>
-            </View>
           </View>
 
           <View style={styles.flex}>
-            <Text>: نوع المهنه المراد ايقافها</Text>
+            <Text>نوع المهنه</Text>
             <View style={styles.formLine} />
           </View>
 
@@ -357,17 +364,159 @@ const StopActivityRequest = ({ formNumber }) => {
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text> الشارع : العنوان</Text>
+            <Text>: مكان الاصدار</Text>
             <View style={styles.formLine} />
-            <Text>: المنطقه</Text>
+            <Text>: تاريخ الاصدار</Text>
+
+            {/* اليوم */}
+            <View style={styles.datePart}>
+              <View style={styles.formLine} />
+              <Text style={styles.slash}>/</Text>
+            </View>
+
+            {/* الشهر */}
+            <View style={styles.datePart}>
+              <View style={styles.formLine} />
+              <Text style={styles.slash}>/</Text>
+            </View>
+
+            {/* السنة */}
+            <View style={styles.datePart}>
+              <View style={styles.formLine} />
+              <Text>م</Text>
+            </View>
+            <Text>: تاريخ الانتهاء</Text>
+
+            {/* اليوم */}
+            <View style={styles.datePart}>
+              <View style={styles.formLine} />
+              <Text style={styles.slash}>/</Text>
+            </View>
+
+            {/* الشهر */}
+            <View style={styles.datePart}>
+              <View style={styles.formLine} />
+              <Text style={styles.slash}>/</Text>
+            </View>
+
+            {/* السنة */}
+            <View style={styles.datePart}>
+              <View style={styles.formLine} />
+              <Text>م</Text>
+            </View>
+          </View>
+
+          <View style={[styles.flex, styles.mt]}>
+            <Text>معلومات التواصل : الجوال </Text>
+            <View style={[styles.formLine, { flex: 2 }]} />
+            <Text>: تلفون</Text>
             <View style={styles.formLine} />
-            <Text>: رقم المحل</Text>
+            <Text>: فكس</Text>
             <View style={styles.formLine} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text> : اسم الشهرة </Text>
+            <Text>: العنوان</Text>
             <View style={[styles.formLine, { flex: 2 }]} />
+            <Text>: رقم المحل ان وجد</Text>
+            <View style={styles.formLine} />
+          </View>
+
+          <View style={[styles.flex, styles.mt]}>
+            <Text> : اسم شهرة المحل</Text>
+            <View style={[styles.formLine, { flex: 2 }]} />
+          </View>
+
+          {/* نوع المحل */}
+          <View style={[styles.flex, styles.mt]}>
+            <Text style={styles.labelSmall}>: نوع ملكية العقار</Text>
+
+            <View style={styles.checkboxGroup}></View>
+          </View>
+
+          {/* تمليك مع حقل اسم المالك */}
+          <View
+            style={{
+              flexDirection: "row-reverse",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            <Text style={styles.checkboxLabel}>تمليك</Text>
+            <View style={styles.checkbox} />
+            <Text> : اسم المالك</Text>
+            <View style={[styles.formLine, { flex: 1 }]} />
+          </View>
+
+          {/* إيجار مع حقل تاريخ الإيجار */}
+          <View
+            style={{
+              flexDirection: "row-reverse",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            <Text style={styles.checkboxLabel}>إيجار</Text>
+            <View style={styles.checkbox} />
+            <Text> : قيمه الايجار</Text>
+            <View style={[styles.formLine, { flex: 2 }]} />
+            <Text> : العمله</Text>
+            <View style={[styles.formLine]} />
+          </View>
+
+          <View
+            style={{
+              flexDirection: "row-reverse",
+              justifyContent: "space-between",
+              marginTop: 4,
+              width: "100%", // ✅ تصحيح typo
+            }}
+          >
+            <View
+              style={{
+                flexDirection: "row-reverse",
+                alignItems: "center",
+                gap: 2,
+              }}
+            >
+              <Text>: تاريخ الإيجار</Text>
+
+              <Text>: من</Text>
+              <View style={styles.datePart}>
+                <View style={styles.formLine} />
+                <Text style={styles.slash}>/</Text>
+              </View>
+              <View style={styles.datePart}>
+                <View style={styles.formLine} />
+                <Text style={styles.slash}>/</Text>
+              </View>
+              <View style={styles.datePart}>
+                <View style={styles.formLine} />
+                <Text>م</Text>
+              </View>
+            </View>
+
+            <View
+              style={{
+                flexDirection: "row-reverse",
+                alignItems: "center",
+                gap: 2,
+              }}
+            >
+              <Text>: إلى</Text>
+              <View style={styles.datePart}>
+                <View style={styles.formLine} />
+                <Text style={styles.slash}>/</Text>
+              </View>
+              <View style={styles.datePart}>
+                <View style={styles.formLine} />
+                <Text style={styles.slash}>/</Text>
+              </View>
+              <View style={styles.datePart}>
+                <View style={styles.formLine} />
+                <Text>م</Text>
+              </View>
+            </View>
           </View>
 
           {/* نوع المحل */}
@@ -389,27 +538,108 @@ const StopActivityRequest = ({ formNumber }) => {
         </View>
 
         <View>
-          <Text style={[styles.bold, styles.textCenter, styles.underline]}>
-            : تاكيد
+          <Text style={[styles.bold, styles.textRight, styles.underline]}>
+            : بيانات اضافيه
           </Text>
-          <Text style={[styles.textCenter]}>
-            بعد النزول والمعاينه نؤكد بان المذكور اعلاء قد قام بايقاف النشاط
-            اعلاء في المحل ولم يعد يزاوله.
+        </View>
+
+        <View style={styles.flex}>
+          <Text style={styles.label}>:نوع اللوحه</Text>
+
+          <View style={styles.checkboxGroup}>
+            <View style={styles.checkItem}>
+              <View style={styles.checkbox} />
+              <Text style={styles.checkboxLabel}>لوحه عادية</Text>
+            </View>
+
+            <View style={styles.checkItem}>
+              <View style={styles.checkbox} />
+              <Text style={styles.checkboxLabel}>لوحه مضيئه</Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={[styles.flex, styles.mt]}>
+          <Text> : مساحه اللوحه</Text>
+          <Text> : الطول</Text>
+          <Text>)</Text>
+          <View style={[styles.formLine]} /> <Text>(</Text>
+          <Text>م</Text>
+          <Text>*</Text>
+          <Text> : العرض</Text>
+          <Text>)</Text>
+          <View style={[styles.formLine]} /> <Text>(</Text>
+          <Text>م</Text>
+          <Text>=</Text>
+          <Text> : اجمالي</Text>
+          <Text>)</Text>
+          <View style={[styles.formLine]} /> <Text>(</Text>
+          <Text>متر</Text>
+          <Text style={{ marginRight: 12 }}> : عدد الفتحات</Text>
+          <View style={[styles.formLine]} />
+        </View>
+
+        <View style={[styles.flex, styles.mt]}>
+          <Text> : مساحه العوائق</Text>
+          <Text> : الطول</Text>
+          <Text>)</Text>
+          <View style={[styles.formLine]} /> <Text>(</Text>
+          <Text>م</Text>
+          <Text>*</Text>
+          <Text> : العرض</Text>
+          <Text>)</Text>
+          <View style={[styles.formLine]} /> <Text>(</Text>
+          <Text>م</Text>
+          <Text>=</Text>
+          <Text> : اجمالي</Text>
+          <Text>)</Text>
+          <View style={[styles.formLine]} /> <Text>(</Text>
+          <Text>متر</Text>
+          <Text style={{ marginRight: 12 }}> : عدد الموظفين</Text>
+          <View style={[styles.formLine]} />
+        </View>
+
+        <View style={[styles.flex, styles.mt]}>
+          <Text>: الاحداثي الشمالي</Text>
+          <View style={styles.formLine} />
+          <Text>: الاحداثي الشرقي</Text>
+          <View style={styles.formLine} />
+        </View>
+
+        <View style={[styles.flex, styles.mt]}>
+          <Text style={[styles.bold, styles.textRight, styles.underline]}>
+            : يستحق غرامه مزاوله المهنه بدون ترخيص
           </Text>
+          <Text style={{ width: 25 }}>نعم</Text>
+          <Text>)</Text>
+          <View style={[{ width: 40 }]} />
+          <Text>(</Text>
 
-          <View style={[styles.flex, styles.mt]}>
-            <Text>: اسم المختص</Text>
-            <View style={styles.formLine} />
-            <Text>: رئيس القسم</Text>
-            <View style={styles.formLine} />
-          </View>
+          <Text style={{ width: 25 }}>لا</Text>
+          <Text>)</Text>
+          <View style={[{ width: 40 }]} />
+          <Text>(</Text>
+        </View>
 
-          <View style={[styles.flex, styles.mt]}>
-            <Text>: التوقيع</Text>
-            <View style={styles.formLine} />
-            <Text>: التوقيع</Text>
-            <View style={styles.formLine} />
-          </View>
+        <View style={[styles.textcenter, styles.mt]}>
+          <Text style={styles.sectionTitle}>
+            اقرار : انا الموقع بان التفاصيل المقدمه اعلاء صحيحه و صادقه ومن وقع
+            نزولي لمعاينه الموقع
+          </Text>
+        </View>
+
+        <View style={[styles.flex, styles.mt]}>
+          <Text>: اسم الشخص</Text>
+          <View style={styles.formLine} />
+          <Text>: رئيس القسم</Text>
+          <View style={styles.formLine} />
+        </View>
+
+        <View style={[styles.flex, styles.mt]}>
+          <Text>: التوقيع</Text>
+          <View style={styles.formLine} />
+          <Text>: التوقيع</Text>
+          <View style={styles.formLine} />
         </View>
 
         <View style={[styles.borderCard, styles.textRight]}>
@@ -417,8 +647,8 @@ const StopActivityRequest = ({ formNumber }) => {
           <Text>لن ادفع رسوم للتراخيص حتي يوافق اولا علي هذا الطلب</Text>
           <Text>يجب عدم مزاوله العمل حتي تدفع الرسوم ويمنح الترخيص</Text>
           <Text>
-            اذا وجد المتقدم يزاول العمل قبل اصدار التراخيص المطلوب فسيكون
-            للمحكمه بموجب القوانين الفرعيه المتعلقه بذلك.{" "}
+            اذا وجد المقدم يزاول العمل قبل اصدار التراخيص المطلوب فسيكون للمحكمه
+            بموجب القوانين الفرعيه المتعلقه بذلك.{" "}
           </Text>
         </View>
         <View style={[styles.flexFooter, styles.mt]}>
@@ -428,12 +658,32 @@ const StopActivityRequest = ({ formNumber }) => {
                 : المرفقات المطلوبه
               </Text>
             </View>
-            <Text style={styles.textRight}>صوره المستفيد 4*6 صوره </Text>
-            <Text style={styles.textRight}>رخصة مزاولة المهمة السابقة</Text>
+            <Text style={styles.textRight}>
+              صوره المستفيد 4*6 صوره البطاقه الشخصيه{" "}
+            </Text>
+            <Text style={styles.textRight}>
+              عقد الايجار او الملكيه - فاتوره كهرباء
+            </Text>
+            <Text style={styles.textRight}>
+              صوره المحل من الداخل و الخرج توضح العوائق و عدد الفتحات واللوحه
+            </Text>
+            <Text style={styles.textRight}>
+              السجل التجاري في حال الرغبه بكتابه الاسم التجاري في الترخيص
+            </Text>
+          </View>
 
-            <Text style={styles.textRight}>افاده مكتب الضرائب</Text>
-            <Text style={styles.textRight}>صوره المحل من الداخل و الخرج</Text>
-            <Text style={styles.textRight}>افاده مكتب الواجبات</Text>
+          <View style={{ flex: 1 }}>
+            <View style={[styles.medium, styles.textRight]}>
+              <Text style={[styles.medium, styles.textRight]}>
+                : بالاضافه للمرفقات التاليه في حال التجديد
+              </Text>
+            </View>
+            <Text style={styles.textRight}>رخصة مزاولة المهمة السابقة</Text>
+            <Text style={styles.textRight}>سند سداد مكتب الضرئب</Text>
+            <Text style={styles.textRight}>سند سداد مكتب الواجبات</Text>
+            <Text style={styles.textRight}>
+              في حال فرع أو تجديد فرع يتم ارفاق ترخيص المركز الرئيسي
+            </Text>
           </View>
         </View>
       </Page>

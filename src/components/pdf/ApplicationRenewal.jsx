@@ -213,6 +213,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  flexCol: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 10,
+  },
 
   mt: {
     marginTop: 4,
@@ -277,10 +282,8 @@ const ApplicationRenewal = ({ formNumber }) => {
           {/* Right */}
           <View style={{ textAlign: "center", flex: 1 }}>
             <Text style={styles.headerText}>
-              DIRECTORATE FOR{"\n"}
-              GENERAL{"\n"}
-              MUNICIPALITIES{"\n"}
-              MINISTRY & ROADS
+              REBUBLIC OF YEMEN{"\n"}
+              Ministry of Culture
             </Text>
           </View>
         </View>
@@ -289,9 +292,7 @@ const ApplicationRenewal = ({ formNumber }) => {
         <Text style={styles.title}>
           استماره طلب الحصول علي تراخيص مزاوله مهنه نشاط او تجديد
         </Text>
-        <Text style={styles.subtitle}>
-          {"APPLICATION FOR LICENCE OR RENEWAL".toUpperCase()}
-        </Text>
+      
 
         <View>
           <View style={styles.formRow}>
@@ -309,22 +310,12 @@ const ApplicationRenewal = ({ formNumber }) => {
                   <View style={styles.checkbox} />
                   <Text style={styles.checkboxLabel}>تجديد</Text>
                 </View>
-
-                <View style={styles.checkItem}>
-                  <View style={styles.checkbox} />
-                  <Text style={styles.checkboxLabel}>مركز رئيسي</Text>
-                </View>
-
-                <View style={styles.checkItem}>
-                  <View style={styles.checkbox} />
-                  <Text style={styles.checkboxLabel}>فرع</Text>
-                </View>
               </View>
             </View>
 
             {/* الجزء الأيسر */}
             <View style={styles.leftSide}>
-              <Text style={styles.label}>تاريخ انتهاء آخر تجديد</Text>
+              <Text style={styles.label}>تاريخ انتهاء آخر ترخيص</Text>
 
               {/* اليوم */}
               <View style={styles.datePart}>
@@ -411,19 +402,21 @@ const ApplicationRenewal = ({ formNumber }) => {
             <View style={[styles.formLine, { flex: 2 }]} />
             <Text>: تلفون</Text>
             <View style={styles.formLine} />
-            <Text>: فكس</Text>
+            <Text>: فاكس</Text>
             <View style={styles.formLine} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>: العنوان</Text>
+            <Text>: العنوان الشارع</Text>
             <View style={[styles.formLine, { flex: 2 }]} />
-            <Text>: رقم المحل ان وجد</Text>
+            <Text>: المنطقه</Text>
+            <View style={styles.formLine} />
+            <Text>: رقم المحل</Text>
             <View style={styles.formLine} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text> : اسم شهرة المحل</Text>
+            <Text> : اسم الشهره </Text>
             <View style={[styles.formLine, { flex: 2 }]} />
           </View>
 
@@ -442,7 +435,7 @@ const ApplicationRenewal = ({ formNumber }) => {
               gap: 8,
             }}
           >
-            <Text style={styles.checkboxLabel}>تمليك</Text>
+            <Text style={styles.checkboxLabel}>ملك</Text>
             <View style={styles.checkbox} />
             <Text> : اسم المالك</Text>
             <View style={[styles.formLine, { flex: 1 }]} />
@@ -458,10 +451,8 @@ const ApplicationRenewal = ({ formNumber }) => {
           >
             <Text style={styles.checkboxLabel}>إيجار</Text>
             <View style={styles.checkbox} />
-            <Text> : قيمه الايجار</Text>
+            <Text> : مبلغ الايجار الشهري</Text>
             <View style={[styles.formLine, { flex: 2 }]} />
-            <Text> : العمله</Text>
-            <View style={[styles.formLine]} />
           </View>
 
           <View
@@ -542,61 +533,10 @@ const ApplicationRenewal = ({ formNumber }) => {
             : بيانات اضافيه
           </Text>
         </View>
-
-        <View style={styles.flex}>
-          <Text style={styles.label}>:نوع اللوحه</Text>
-
-          <View style={styles.checkboxGroup}>
-            <View style={styles.checkItem}>
-              <View style={styles.checkbox} />
-              <Text style={styles.checkboxLabel}>لوحه عادية</Text>
-            </View>
-
-            <View style={styles.checkItem}>
-              <View style={styles.checkbox} />
-              <Text style={styles.checkboxLabel}>لوحه مضيئه</Text>
-            </View>
-          </View>
-        </View>
-
         <View style={[styles.flex, styles.mt]}>
-          <Text> : مساحه اللوحه</Text>
-          <Text> : الطول</Text>
-          <Text>)</Text>
-          <View style={[styles.formLine]} /> <Text>(</Text>
-          <Text>م</Text>
-          <Text>*</Text>
-          <Text> : العرض</Text>
-          <Text>)</Text>
-          <View style={[styles.formLine]} /> <Text>(</Text>
-          <Text>م</Text>
-          <Text>=</Text>
-          <Text> : اجمالي</Text>
-          <Text>)</Text>
-          <View style={[styles.formLine]} /> <Text>(</Text>
-          <Text>متر</Text>
-          <Text style={{ marginRight: 12 }}> : عدد الفتحات</Text>
-          <View style={[styles.formLine]} />
-        </View>
+          <Text>: عدد الموظفين</Text>
 
-        <View style={[styles.flex, styles.mt]}>
-          <Text> : مساحه العوائق</Text>
-          <Text> : الطول</Text>
-          <Text>)</Text>
-          <View style={[styles.formLine]} /> <Text>(</Text>
-          <Text>م</Text>
-          <Text>*</Text>
-          <Text> : العرض</Text>
-          <Text>)</Text>
-          <View style={[styles.formLine]} /> <Text>(</Text>
-          <Text>م</Text>
-          <Text>=</Text>
-          <Text> : اجمالي</Text>
-          <Text>)</Text>
-          <View style={[styles.formLine]} /> <Text>(</Text>
-          <Text>متر</Text>
-          <Text style={{ marginRight: 12 }}> : عدد الموظفين</Text>
-          <View style={[styles.formLine]} />
+          <View style={styles.formLine} />
         </View>
 
         <View style={[styles.flex, styles.mt]}>
@@ -606,19 +546,17 @@ const ApplicationRenewal = ({ formNumber }) => {
           <View style={styles.formLine} />
         </View>
 
-        <View style={[styles.flex, styles.mt]}>
-          <Text style={[styles.bold, styles.textRight, styles.underline]}>
-            : يستحق غرامه مزاوله المهنه بدون ترخيص
-          </Text>
-          <Text style={{ width: 25 }}>نعم</Text>
-          <Text>)</Text>
-          <View style={[{ width: 40 }]} />
-          <Text>(</Text>
+        <View style={[styles.flexCol, styles.mt]}>
+          <View style={styles.flex}>
+            <Text>: الملاحظات</Text>
+            <View style={[styles.formLine, { flex: 1 }]} />
+          </View>
 
-          <Text style={{ width: 25 }}>لا</Text>
-          <Text>)</Text>
-          <View style={[{ width: 40 }]} />
-          <Text>(</Text>
+          <View style={[styles.flexCol]}>
+            <View style={styles.formLine} />
+            <View style={styles.formLine} />
+            <View style={styles.formLine} />
+          </View>
         </View>
 
         <View style={[styles.textcenter, styles.mt]}>

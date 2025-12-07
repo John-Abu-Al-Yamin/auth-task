@@ -3,12 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { Toaster } from "sonner";
-import TaxFormPage from "./TaxFormPage.jsx";
+import TaxFormPage from "./TaxFormPage";
+import AppFrom from "./AppFrom.jsx";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./Approuter/Approuter.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-
+    <AppRoutes />
     <Toaster position="top-center" />
   </StrictMode>
 );

@@ -327,9 +327,6 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
         <Text style={styles.title}>
           طلب للحصول على ترخيص فتح تشغيل منشاه طبيه
         </Text>
-        <Text style={styles.subtitle}>
-          {"APPLICATION FOR LICENCE OR RENEWAL".toUpperCase()}
-        </Text>
 
         <View>
           <View style={styles.flexBetween}>

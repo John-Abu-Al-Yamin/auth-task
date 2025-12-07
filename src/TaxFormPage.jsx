@@ -1,8 +1,11 @@
 import React from 'react'
+import Tabs from './components/Tabs/Tabs'
 
 const TaxFormPage = () => {
   return (
-    <div>TaxFormPage</div>
+    <div>
+      <Tabs />
+    </div>
   )
 }
 

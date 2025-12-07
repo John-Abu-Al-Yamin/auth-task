@@ -1,33 +1,68 @@
-import { baseInputs, getInputs, getCustomInputs } from "./baseInputs";
+import { getInputs, getCustomInputs } from "./baseInputs";
+
+
 
 export const formConfig = {
+  // ---------------------- LICENSE ----------------------
   license: {
-    name: "بيانات الرخصة",
-    inputs: getInputs([
-      "application_number",
-      "customer_name",
-      "application_image",
-      "commercial_registration_image", // لو عايز تضيف السجل التجاري هنا
-    ]),
+    general_info: {
+      name: "بيانات عامة",
+      inputs: getInputs([
+        "application_number",
+        "customer_name",
+        "application_image",
+        "commercial_registration_image",
+      ]),
+    },
+
+    attachments: {
+      name: "المرفقات",
+      inputs: getInputs(["application_image", "commercial_registration_image"]),
+    },
   },
 
+  // ---------------------- PROPERTY ----------------------
   property: {
-    name: "بيانات العقار",
-    inputs: getInputs([
-      "rent_start_date",
-      "rent_end_date",
-      "rent_value",
-      "currency_id", // لو عايز تضيف العملة
-    ]),
+    property_info: {
+      name: "بيانات العقار",
+      inputs: getInputs([
+        "rent_start_date",
+        "rent_end_date",
+        "rent_value",
+        "currency_id",
+      ]),
+    },
+
+    contract_info: {
+      name: "بيانات العقد",
+      inputs: getInputs(["rent_start_date", "rent_end_date"]),
+    },
   },
 
+  // ---------------------- ADDITIONAL ----------------------
   additional: {
-    name: "بيانات إضافية",
-    inputs: getInputs([
-      "address",
-      "employee_number",
-      "panel_type_id", // لو عايز تضيف نوع اللوحة
-    ]),
+    additional_info: {
+      name: "بيانات إضافية",
+      inputs: getInputs(["address", "employee_number", "panel_type_id"]),
+    },
+  },
+
+  // ---------------------- TOURISM ----------------------
+  tourism: {
+    tourism_info: {
+      name: "بيانات السياحة",
+      inputs: getInputs([
+        "tourism_start_date",
+        "tourism_end_date",
+        "tourism_value",
+        "currency_id",
+      ]),
+    },
+
+    attachments: {
+      name: "مرفقات السياحة",
+      inputs: getInputs(["tourism_value", "currency_id"]),
+    },
   },
 };
 
