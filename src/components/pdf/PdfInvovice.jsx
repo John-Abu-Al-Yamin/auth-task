@@ -638,7 +638,7 @@ export const PdfInvoice = ({formNumber}) => (
         <View style={styles.formLine} />
       </View>
 
-      <View style={[styles.borderCard, styles.textRight]}>
+      <View style={[styles.borderCard, styles.textRight, ]}>
         <Text style={styles.medium}>: ملاحظات</Text>
         <Text>لن ادفع رسوم للتراخيص حتي يوافق اولا علي هذا الطلب</Text>
         <Text>يجب عدم مزاوله العمل حتي تدفع الرسوم ويمنح الترخيص</Text>
@@ -647,6 +647,7 @@ export const PdfInvoice = ({formNumber}) => (
           بموجب القوانين الفرعيه المتعلقه بذلك.{" "}
         </Text>
       </View>
+      
       <View style={[styles.flexFooter, styles.mt]}>
         <View style={{ flex: 1 }}>
           <View style={[styles.medium, styles.textRight]}>

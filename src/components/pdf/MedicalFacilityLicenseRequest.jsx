@@ -327,6 +327,9 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
         <Text style={styles.title}>
           طلب للحصول على ترخيص فتح تشغيل منشاه طبيه
         </Text>
+        <Text style={styles.subtitle}>
+          {"APPLICATION FOR A LICENCE TO PRACTICE Medical Facilities and health porfessions".toUpperCase()}
+        </Text>
 
         <View>
           <View style={styles.flexBetween}>
@@ -344,11 +347,6 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
                   <View style={styles.checkbox} />
                   <Text style={styles.checkboxLabel}>تجديد</Text>
                 </View>
-              </View>
-
-              <View style={[styles.flex, { flex: 1 }]}>
-                <Text>: اخري </Text>
-                <View style={styles.formLine} />
               </View>
             </View>
 
@@ -377,17 +375,12 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
           </View>
 
           <View style={styles.flex}>
-            <Text>نوع المنشاه</Text>
+            <Text>نوع المهنه</Text>
             <View style={styles.formLine} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>اسم المنشاه الطبيه</Text>
-            <View style={styles.formLine} />
-          </View>
-
-          <View style={[styles.flex, styles.mt]}>
-            <Text>اسم مالك المنشاه</Text>
+            <Text>اسم مقدم الطلب</Text>
             <View style={styles.formLine} />
           </View>
 
@@ -396,13 +389,16 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
             <View style={styles.formLine} />
             <Text>: مكان الميلاد</Text>
             <View style={styles.formLine} />
-            <Text>: تاريخ الميلاد</Text>
-            <View style={styles.formLine} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
             <Text>: نوع الهويه</Text>
             <View style={styles.formLine} />
+            <Text>: تاريخ الميلاد</Text>
+            <View style={styles.formLine} />
+          </View>
+
+          <View style={[styles.flex, styles.mt]}>
             <Text>: رقم الهويه</Text>
             <View style={styles.formLine} />
             <Text>: مكان الاصدار</Text>
@@ -451,156 +447,22 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>عنوان المالك </Text>
-            <View style={[styles.formLine, { flex: 2 }]} />
-            <Text>: تلفون</Text>
-            <View style={styles.formLine} />
-            <Text>: جوال</Text>
-            <View style={styles.formLine} />
+            <Text>المؤهل العلمي </Text>
+            <View style={[styles.formLine]} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>عنوان المنشاه </Text>
-            <View style={[styles.formLine, { flex: 2 }]} />
-            <Text>: تلفون</Text>
-            <View style={styles.formLine} />
-            <Text>: جوال</Text>
-            <View style={styles.formLine} />
+            <Text>التخصص </Text>
+            <View style={[styles.formLine]} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>: بريد الكتروني </Text>
-            <View style={[styles.formLine, { flex: 2 }]} />
-            <Text>: موقع الانترنت </Text>
-            <View style={styles.formLine} />
-            <Text>: صندوق البريد</Text>
-            <View style={styles.formLine} />
-          </View>
-
-          {/* نوع المحل */}
-          <View style={[styles.flex, styles.mt]}>
-            <Text style={styles.labelSmall}>: نوع ملكية العقار</Text>
-
-            <Text style={styles.checkboxLabel}>ملك</Text>
-            <View style={styles.checkboxGroup}>
-              <View style={styles.checkbox} />
-            </View>
-          </View>
-
-          {/* إيجار مع حقل تاريخ الإيجار */}
-          <View
-            style={{
-              flexDirection: "row-reverse",
-              alignItems: "center",
-              gap: 8,
-            }}
-          >
-            <Text
-              style={{
-                marginRight: 56,
-              }}
-            >
-              إيجار
-            </Text>
-            <Text> : مبلغ الايجار الشهري</Text>
-            <View style={[styles.formLine, { flex: 1 }]} />
-          </View>
-
-          <View
-            style={{
-              flexDirection: "row-reverse",
-              justifyContent: "space-between",
-              marginTop: 4,
-              width: "100%",
-            }}
-          >
-            <View
-              style={{
-                flexDirection: "row-reverse",
-                alignItems: "center",
-                gap: 2,
-              }}
-            >
-              <Text>: تاريخ الإيجار</Text>
-
-              <Text>: من</Text>
-              <View style={styles.datePart}>
-                <View style={styles.formLine} />
-                <Text style={styles.slash}>/</Text>
-              </View>
-              <View style={styles.datePart}>
-                <View style={styles.formLine} />
-                <Text style={styles.slash}>/</Text>
-              </View>
-              <View style={styles.datePart}>
-                <View style={styles.formLine} />
-                <Text>م</Text>
-              </View>
-            </View>
-
-            <View
-              style={{
-                flexDirection: "row-reverse",
-                alignItems: "center",
-                gap: 2,
-              }}
-            >
-              <Text>: إلى</Text>
-              <View style={styles.datePart}>
-                <View style={styles.formLine} />
-                <Text style={styles.slash}>/</Text>
-              </View>
-              <View style={styles.datePart}>
-                <View style={styles.formLine} />
-                <Text style={styles.slash}>/</Text>
-              </View>
-              <View style={styles.datePart}>
-                <View style={styles.formLine} />
-                <Text>م</Text>
-              </View>
-            </View>
+            <Text>مكان المؤهل </Text>
+            <View style={[styles.formLine]} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>: عدد الادوار</Text>
-            <View style={styles.formLine} />
-            <Text>: عدد الاقسام</Text>
-            <View style={styles.formLine} />
-            <Text>: عدد الاسره</Text>
-            <View style={styles.formLine} />
-          </View>
-
-          <View style={[styles.flex, styles.mt]}>
-            <View style={styles.checkboxGroup}>
-              <View style={styles.checkItem}>
-                <View style={styles.checkbox} />
-                <Text style={styles.checkboxLabel}>المدير الطبي</Text>
-              </View>
-
-              <View style={styles.checkItem}>
-                <View style={styles.checkbox} />
-                <Text style={styles.checkboxLabel}>الاخصائي</Text>
-              </View>
-            </View>
-
-            <View style={[styles.flex, { flex: 1 }]}>
-              <Text>:الفني </Text>
-              <Text>: الاسم </Text>
-              <View style={styles.formLine} />
-            </View>
-          </View>
-
-          <View style={[styles.flex, styles.mt]}>
-            <Text>: المؤهل العلمي</Text>
-            <View style={styles.formLine} />
-            <Text>: التخصص</Text>
-            <View style={styles.formLine} />
-          </View>
-
-          <View style={[styles.flex, styles.mt]}>
-            <Text>: مكان المؤهل</Text>
-            <View style={styles.formLine} />
-            <Text>: تاريخ الحصول علي المؤهل</Text>
+            <Text>: تاريخ الحصول علي الموهل</Text>
 
             {/* اليوم */}
             <View style={styles.datePart}>
@@ -622,61 +484,16 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>: الجنسيه</Text>
-            <View style={styles.formLine} />
-            <Text>: تاريخ الميلاد</Text>
-            <View style={styles.formLine} />
-            <Text>: نوع الهويه</Text>
-            <View style={styles.formLine} />
-            <Text>: رقم الهويه</Text>
-            <View style={styles.formLine} />
+            <Text>اسم المنشاه الطبيه </Text>
+            <View style={[styles.formLine]} />
           </View>
 
           <View style={[styles.flex, styles.mt]}>
-            <Text>: مكان الاصدار</Text>
-            <View style={styles.formLine} />
-
-            <Text>: تاريخ الاصدار</Text>
-            {/* اليوم */}
-            <View style={styles.datePart}>
-              <View style={styles.formLine} />
-              <Text style={styles.slash}>/</Text>
-            </View>
-
-            {/* الشهر */}
-            <View style={styles.datePart}>
-              <View style={styles.formLine} />
-              <Text style={styles.slash}>/</Text>
-            </View>
-
-            {/* السنة */}
-            <View style={styles.datePart}>
-              <View style={styles.formLine} />
-              <Text>م</Text>
-            </View>
+            <Text>رقم الترخيص </Text>
+            <View style={[styles.formLine]} />
           </View>
 
-          <View style={[styles.flex, styles.mt]}>
-            <Text>: كادر العمل اليمني: الكادر الطبي</Text>
-            <View style={styles.formLine} />
-            <Text>: الكادر الصحي</Text>
-            <View style={styles.formLine} />
-            <Text>: الخدمات</Text>
-            <View style={styles.formLine} />
-            <Text>: الاداره</Text>
-            <View style={styles.formLine} />
-          </View>
-
-          <View style={[styles.flex, styles.mt]}>
-            <Text>: كادر العمل الاجنبي: الكادر الطبي</Text>
-            <View style={styles.formLine} />
-            <Text>: الكادر الصحي</Text>
-            <View style={styles.formLine} />
-            <Text>: الخدمات</Text>
-            <View style={styles.formLine} />
-            <Text>: الاداره</Text>
-            <View style={styles.formLine} />
-          </View>
+          <View style={[styles.border]} />
 
           <View style={[styles.textcenter, styles.mt]}>
             <Text style={styles.sectionTitle}>
@@ -738,6 +555,7 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
         </View>
 
         {/* =========================================================== */}
+          <View style={[styles.border]} />
 
         <View style={[styles.flexFooter, styles.mt]}>
           <View style={{ flex: 1 }}>
