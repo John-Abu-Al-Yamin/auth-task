@@ -9,6 +9,7 @@ import ApplicationRenewal from "./components/pdf/ApplicationRenewal";
 import Bdftest from "./components/pdf/Bdftest";
 import BusinessLicensePdf from "./components/pdf/BusinessLicensePdf";
 import LicenseCashDeposit from "./components/pdf/LicenseCashDeposit/LicenseCashDeposit";
+import ExtractingLicenseWork from "./components/pdf/Extracting/ExtractingLicenseWork";
 
 const App = () => {
   const [showPdf, setShowPdf] = useState(false);
@@ -58,7 +59,7 @@ const App = () => {
             <div className="flex-1 mt-2">
               {formNumber !== null ? (
                 <PDFViewer className="w-full h-full">
-                  <LicenseCashDeposit />
+                  <ExtractingLicenseWork />
                 </PDFViewer>
               ) : (
                 <p>جاري التحميل...</p>

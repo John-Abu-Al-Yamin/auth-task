@@ -256,10 +256,10 @@ const LicenseCashDeposit = () => {
           <View
             style={{ flexDirection: "column", alignItems: "center", flex: 1 }}
           >
-            <Text style={styles.subtitle}>
-              حافظة توريد نقدية الى الخزينة {"\n"}
-              لرخصه مزواولة مهنه
+           <Text style={styles.subtitle}>
+              حافظة توريد نقدية الى الخزينة 
             </Text>
+            <Text style={styles.subtitle}>لرخصه مزواولة مهنه</Text>
             <Text>
               (
               <Text style={[styles.textnormal, styles.textRed]}>
@@ -387,12 +387,13 @@ const LicenseCashDeposit = () => {
 
           {/* Center column */}
           <View
-            style={{ flexDirection: "column", alignItems: "center", flex: 1 }}
+            style={{ flexDirection: "column", alignItems: "center"}}
           >
-            <Text style={styles.subtitle}>
-              حافظة توريد نقدية الى الخزينة {"\n"}
-              لرخصه مزواولة مهنه
+           <Text style={styles.subtitle}>
+              حافظة توريد نقدية الى الخزينة 
             </Text>
+            
+            <Text style={styles.subtitle}>لرخصه مزواولة مهنه</Text>
             <Text>
               (
               <Text style={[styles.textnormal, styles.textRed]}>
