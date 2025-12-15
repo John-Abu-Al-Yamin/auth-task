@@ -201,17 +201,15 @@ const styles = StyleSheet.create({
 
 // رسوم الرخصة
 const feesSection = [
-  { name: "رسوم محل", amount: "0.00", discription: "" },
-  { name: "رسوم فتحات", amount: "0.00", discription: "" },
-  { name: "رسوم عوائق", amount: "22", discription: "" },
-  { name: "رسوم غرامة", amount: "22", discription: "" },
-  { name: "دعاية واعلان", amount: "22", discription: "" },
-  { name: "متاخرات رسوم", amount: "22", discription: "" },
+  { name: "رسوم تخيص", amount: "0.00", discription: "" },
+  { name: "رسوم غرامة", amount: "0.00", discription: "" },
+  { name: "دعايه واعلان", amount: "22", discription: "" },
+  { name: "المتاخرات", amount: "22", discription: "" },
 ];
 
 // رسوم النظافة
 const cleaningSection = [
-  { name: "تحسين واعلان", amount: "22", discription: "" },
+  { name: "دعاية واعلان", amount: "22", discription: "" },
   { name: "رسوم تحسين", amount: "22", discription: "" },
   { name: "نظافه", amount: "22", discription: "" },
   { name: "متاخرات نظافه", amount: "22", discription: "" },
@@ -219,7 +217,7 @@ const cleaningSection = [
   { name: "اجمالي النظافه", amount: "22", discription: "" },
 ];
 
-const ExtractingLicenseWork = () => {
+const ExtractingLicenseculture = () => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
@@ -276,11 +274,11 @@ const ExtractingLicenseWork = () => {
             <View style={{ textAlign: "center", flex: 1, zIndex: 2 }}>
               <Text style={styles.headerText}>الجمهورية اليمنية</Text>
               <Text>
-                وزاره الاشغال العامه و الطرق
+                وزاره الثقافه
                 {"\n"}
-                مكتب عدن
+                محافظه عدن
               </Text>
-              <Text>مديريه المنصوره</Text>
+              <Text>مكتب الثقافه مديريه المنصوره</Text>
             </View>
           </View>
 
@@ -344,37 +342,23 @@ const ExtractingLicenseWork = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  رخصه مزوله مهنة مؤقتة
+                  رخصه مزوله مهنة
                 </Text>
                 <Text
                   style={[
                     styles.textRed,
-                    { textAlign: "center", marginTop: 0 },
+                    { textAlign: "center", marginTop: 4 },
                   ]}
                 >
-                  ( سوبر ماركت )
+                  ( تسويق الكتروني )
                 </Text>
               </View>
             </View>
           </View>
-          <View
-            style={[
-              styles.borderCard,
-              styles.textRed,
-              styles.textBold,
-              styles.textCenter,
-            ]}
-          >
-            <Text>
-              ملاحظة هامه : هذه لرخصة مؤقته و يحق لمكتب الاشغال العامة و الطرق
-              سحب هذه الرخصة في اي وقت دون تحمل اي مسؤلية تجاه صاحبها اذا دعت
-              الحاجه لذلك
-            </Text>
-          </View>
 
           <View style={{ position: "relative" }}>
             {/* detalis user */}
-            
+
             <View
               style={[
                 styles.borderCard,
@@ -407,12 +391,12 @@ const ExtractingLicenseWork = () => {
                   <View style={styles.flex}>
                     <View style={styles.flex}>
                       <Text style={styles.textColor}>اسم المكلف</Text>
-                      <Text>جون عماد</Text>
+                      <Text>دينا محمد</Text>
                     </View>
 
                     <View style={styles.flex}>
                       <Text style={styles.textColor}>نوع الرخصه</Text>
-                      <Text>مؤقت</Text>
+                      <Text>جديد (رئيسي)</Text>
                     </View>
                   </View>
 
@@ -424,7 +408,7 @@ const ExtractingLicenseWork = () => {
 
                     <View style={styles.flex}>
                       <Text style={styles.textColor}>نوعها :</Text>
-                      <Text>جواز سفر</Text>
+                      <Text>بطاقة شخصية</Text>
                     </View>
 
                     <View style={styles.flex}>
@@ -444,36 +428,13 @@ const ExtractingLicenseWork = () => {
 
                   <View style={styles.flex}>
                     <View style={styles.flex}>
-                      <Text style={styles.textColor}>نوع اللوحة</Text>
-                      <Text>لوحةضوئيه</Text>
-                    </View>
-
-                    <View style={styles.flex}>
-                      <Text style={styles.textColor}>مساحه اللوحه :</Text>
-                      <Text>6</Text>
-                    </View>
-
-                    <View style={styles.flex}>
-                      <Text style={styles.textColor}>عدد فتحات</Text>
-                      <Text>3</Text>
-                    </View>
-                  </View>
-
-                  <View style={styles.flex}>
-                    <View style={styles.flex}>
                       <Text style={styles.textColor}>الملاحظه:</Text>
                       <Text> </Text>
-                    </View>
-
-                    <View style={styles.flex}>
-                      <Text style={styles.textColor}>رقم الملف</Text>
-                      <Text>26788787</Text>
                     </View>
                   </View>
                 </View>
               </View>
             </View>
-
 
             {/* Table */}
             <View style={[styles.table, { position: "relative" }]}>
@@ -580,6 +541,23 @@ const ExtractingLicenseWork = () => {
                 <Text style={styles.tableCellNote}>الف من الرسوم</Text>
               </View>
             </View>
+
+            <View style={[styles.marginTop]}>
+              <Text style={[styles.textRight, styles.subtitle]}>
+                تمنح هذاارخصة لمزاوله العمل و الحرفه المبينة تفصيلا اعلاه وعلي
+                حاملها مايلي :
+              </Text>
+              <Text style={[styles.textRight, styles.subtitle]}>
+                {" "}
+                الالتزام بقانون الصحافة و المطبوعات رقم (25) لسنه 1990م و
+                اللوائح والانظمه و القرارات الصادرة عن الوزارة.-
+              </Text>
+              <Text style={[styles.textRight, styles.subtitle]}>
+                . اي تغيير او كشط في هذه الرخصة تعتبر ملغية تعتبر هذه الرخصة
+                سارية المفعول لسنة مالية واحدة علي ان تجدد في نهاية الموعد
+                المحدد
+              </Text>
+            </View>
           </View>
 
           <View>
@@ -587,14 +565,14 @@ const ExtractingLicenseWork = () => {
               style={{
                 borderBottomWidth: 1,
                 borderBottomColor: "#000",
-                width: 120,
+                width: 70,
                 textAlign: "center",
-                marginLeft: 80,
+                marginLeft: 60,
                 marginTop: 16,
                 fontWeight: "bold",
               }}
             >
-              مدير مكتب الاشغال العامةو الطرق
+              مدير مكتب الثقافه
             </Text>
           </View>
 
@@ -642,4 +620,4 @@ const ExtractingLicenseWork = () => {
   );
 };
 
-export default ExtractingLicenseWork;
+export default ExtractingLicenseculture;

@@ -256,13 +256,9 @@ const StopActivityRequest = () => {
           {/* Left */}
           <View style={{ textAlign: "center", flex: 1 }}>
             <Text style={styles.headerText}>الجمهورية اليمنية</Text>
-            <Text>
-              مكتب الاشغال العامه و الطرق مدريه المنصوره
-            </Text>
+            <Text>مكتب الاشغال العامه و الطرق مدريه المنصوره</Text>
 
-            <Text style={styles.headerSubtext}>
-              رقم الاستماره : 89892
-            </Text>
+            <Text style={styles.headerSubtext}>رقم الاستماره : 89892</Text>
             <Text style={styles.headerSubtext}>التاريخ : 01/01/2026</Text>
           </View>
 
@@ -273,7 +269,7 @@ const StopActivityRequest = () => {
             <Text style={{ fontSize: 12, fontWeight: "bold", marginBottom: 3 }}>
               بسم الله الرحمن الرحيم
             </Text>
-            <Image src="/logo.png" style={styles.emblemPlaceholder} />
+            <Image src="/logo.jpeg" style={styles.emblemPlaceholder} />
           </View>
 
           {/* Right */}

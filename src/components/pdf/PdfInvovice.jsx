@@ -1,4 +1,3 @@
-
 import {
   Document,
   Page,
@@ -248,7 +247,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const PdfInvoice = ({formNumber}) => (
+export const PdfInvoice = ({ formNumber }) => (
   <Document>
     <Page size="A4" style={styles.page}>
       {/* رأس الصفحة / Header */}
@@ -258,7 +257,7 @@ export const PdfInvoice = ({formNumber}) => (
           <Text style={styles.headerText}>الجمهورية اليمنية</Text>
           <Text>مكتب الاشغال العامه و الطرق مدريه المنصوره</Text>
 
-          <Text style={styles.headerSubtext}>رقم الاستماره :  {formNumber}</Text>
+          <Text style={styles.headerSubtext}>رقم الاستماره : {formNumber}</Text>
           <Text style={styles.headerSubtext}>التاريخ : 01/01/2026</Text>
         </View>
 
@@ -269,7 +268,7 @@ export const PdfInvoice = ({formNumber}) => (
           <Text style={{ fontSize: 12, fontWeight: "bold", marginBottom: 3 }}>
             بسم الله الرحمن الرحيم
           </Text>
-          <Image src="/logo.png" style={styles.emblemPlaceholder} />
+          <Image src="/logo.jpeg" style={styles.emblemPlaceholder} />
         </View>
 
         {/* Right */}
@@ -638,7 +637,7 @@ export const PdfInvoice = ({formNumber}) => (
         <View style={styles.formLine} />
       </View>
 
-      <View style={[styles.borderCard, styles.textRight, ]}>
+      <View style={[styles.borderCard, styles.textRight]}>
         <Text style={styles.medium}>: ملاحظات</Text>
         <Text>لن ادفع رسوم للتراخيص حتي يوافق اولا علي هذا الطلب</Text>
         <Text>يجب عدم مزاوله العمل حتي تدفع الرسوم ويمنح الترخيص</Text>
@@ -647,7 +646,7 @@ export const PdfInvoice = ({formNumber}) => (
           بموجب القوانين الفرعيه المتعلقه بذلك.{" "}
         </Text>
       </View>
-      
+
       <View style={[styles.flexFooter, styles.mt]}>
         <View style={{ flex: 1 }}>
           <View style={[styles.medium, styles.textRight]}>
@@ -672,7 +671,7 @@ export const PdfInvoice = ({formNumber}) => (
         <View style={{ flex: 1 }}>
           <View style={[styles.medium, styles.textRight]}>
             <Text style={[styles.medium, styles.textRight]}>
-             : بالاضافه للمرفقات التاليه في حال التجديد
+              : بالاضافه للمرفقات التاليه في حال التجديد
             </Text>
           </View>
           <Text style={styles.textRight}>رخصة مزاولة المهمة السابقة</Text>

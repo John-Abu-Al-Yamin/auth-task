@@ -229,7 +229,7 @@ const LicenseCashDeposit = () => {
             <Text style={{ fontSize: 10, marginBottom: 2 }}>
               بسم الله الرحمن الرحيم
             </Text>
-            <Image src="/logo.png" style={styles.emblemPlaceholder} />
+            <Image src="/logo.jpeg" style={styles.emblemPlaceholder} />
           </View>
 
           {/* Left */}
@@ -256,9 +256,7 @@ const LicenseCashDeposit = () => {
           <View
             style={{ flexDirection: "column", alignItems: "center", flex: 1 }}
           >
-           <Text style={styles.subtitle}>
-              حافظة توريد نقدية الى الخزينة 
-            </Text>
+            <Text style={styles.subtitle}>حافظة توريد نقدية الى الخزينة</Text>
             <Text style={styles.subtitle}>لرخصه مزواولة مهنه</Text>
             <Text>
               (
@@ -362,7 +360,7 @@ const LicenseCashDeposit = () => {
             <Text style={{ fontSize: 10, marginBottom: 2 }}>
               بسم الله الرحمن الرحيم
             </Text>
-            <Image src="/logo.png" style={styles.emblemPlaceholder} />
+            <Image src="/logo.jpeg" style={styles.emblemPlaceholder} />
           </View>
 
           {/* Left */}
@@ -386,13 +384,9 @@ const LicenseCashDeposit = () => {
           </View>
 
           {/* Center column */}
-          <View
-            style={{ flexDirection: "column", alignItems: "center"}}
-          >
-           <Text style={styles.subtitle}>
-              حافظة توريد نقدية الى الخزينة 
-            </Text>
-            
+          <View style={{ flexDirection: "column", alignItems: "center" }}>
+            <Text style={styles.subtitle}>حافظة توريد نقدية الى الخزينة</Text>
+
             <Text style={styles.subtitle}>لرخصه مزواولة مهنه</Text>
             <Text>
               (

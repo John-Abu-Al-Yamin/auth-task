@@ -313,7 +313,7 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
             <Text style={{ fontSize: 12, fontWeight: "bold", marginBottom: 3 }}>
               بسم الله الرحمن الرحيم
             </Text>
-            <Image src="/logo.png" style={styles.emblemPlaceholder} />
+            <Image src="/logo.jpeg" style={styles.emblemPlaceholder} />
           </View>
 
           {/* Right */}
@@ -555,7 +555,7 @@ const MedicalFacilityLicenseRequest = ({ formNumber }) => {
         </View>
 
         {/* =========================================================== */}
-          <View style={[styles.border]} />
+        <View style={[styles.border]} />
 
         <View style={[styles.flexFooter, styles.mt]}>
           <View style={{ flex: 1 }}>

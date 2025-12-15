@@ -81,14 +81,15 @@ const styles = StyleSheet.create({
   },
 
   emblemPlaceholder: {
-    width: 40,
-    height: 40,
+    width: 60,
+    height: 50,
     objectFit: "contain",
   },
 
   borderCard: {
     border: "1px solid #000",
     padding: "4px",
+    margin: "12px 0px",
   },
 
   flex: {
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     alignItems: "center",
     justifyContent: "space-between",
-    gap: 2,
+    gap: 4,
   },
   flexGap: {
     display: "flex",
@@ -108,29 +109,20 @@ const styles = StyleSheet.create({
   flexCol: {
     display: "flex",
     flexDirection: "column",
-    gap: "6px 0px", // بدل 12px
+    gap: " 12px 0px",
   },
 
   border: {
     borderTop: "1px solid #000",
-    margin: "10px 0px",
+    margin: "14px 0px",
   },
 
   textRight: {
     textAlign: "right",
   },
 
-  textCenter: {
-    textAlign: "center",
-  },
-
-  textBold: {
-    fontSize: 12,
-    fontWeight: "bold",
-  },
-
   table: {
-    marginTop: 10,
+    marginTop: 20,
     border: "1 solid #000000",
   },
   tableHeader: {
@@ -147,24 +139,24 @@ const styles = StyleSheet.create({
   },
   tableCell: {
     flex: 1,
-    paddingRight: 0,
+    paddingRight: 10,
     direction: "rtl",
     textAlign: "right",
     borderLeft: "1px solid #cccccc",
-    paddingLeft: 0,
-    paddingVertical: 0,
+    paddingLeft: 10,
+    paddingVertical: 8,
   },
-
   tableCellAmount: {
     flex: 1,
     textAlign: "center",
     borderLeft: "1px solid #cccccc",
-    paddingHorizontal: 0,
-    paddingVertical: 0,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
   },
   totalRow: {
     display: "flex",
     flexDirection: "row-reverse",
+    // backgroundColor: "#A3C4D1",
     borderTop: "1px solid #cccccc",
   },
 
@@ -176,8 +168,8 @@ const styles = StyleSheet.create({
     flex: 2.5,
     textAlign: "center",
     borderLeft: "1px solid #cccccc",
-    paddingHorizontal: 0,
-    paddingVertical: 2,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
   },
 
   baseFlex: {
@@ -194,32 +186,25 @@ const styles = StyleSheet.create({
     backgroundColor: "#F9F5ED",
   },
 
+  subtitle: {
+    fontSize: 11,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 4,
+  },
+
   marginTop: {
-    marginTop: 8,
+    marginTop: 16,
   },
 });
 
-// رسوم الرخصة
-const feesSection = [
-  { name: "رسوم محل", amount: "0.00", discription: "" },
-  { name: "رسوم فتحات", amount: "0.00", discription: "" },
-  { name: "رسوم عوائق", amount: "22", discription: "" },
-  { name: "رسوم غرامة", amount: "22", discription: "" },
-  { name: "دعاية واعلان", amount: "22", discription: "" },
-  { name: "متاخرات رسوم", amount: "22", discription: "" },
+const feeItem = [
+  { name: "رسوم تخيص", amount: "0.00", discription: "" },
+  { name: "المتاخرات", amount: "0.00", discription: "" },
+  { name: "مطبوعات", amount: "22" || 0, discription: "" },
 ];
 
-// رسوم النظافة
-const cleaningSection = [
-  { name: "تحسين واعلان", amount: "22", discription: "" },
-  { name: "رسوم تحسين", amount: "22", discription: "" },
-  { name: "نظافه", amount: "22", discription: "" },
-  { name: "متاخرات نظافه", amount: "22", discription: "" },
-  { name: "مطبوعات", amount: "22", discription: "" },
-  { name: "اجمالي النظافه", amount: "22", discription: "" },
-];
-
-const ExtractingLicenseWork = () => {
+const ExtractingLicenseWorkStreet = () => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
@@ -231,7 +216,10 @@ const ExtractingLicenseWork = () => {
               </View>
 
               <View style={styles.backgroundLeft}>
-                <Image src="/logo.jpeg" style={styles.backgroundImage} />
+                <Image
+                  src="/logo.jpeg" // يمكنك استخدام صورة مختلفة هنا
+                  style={styles.backgroundImage}
+                />
               </View>
             </View>
 
@@ -283,8 +271,7 @@ const ExtractingLicenseWork = () => {
               <Text>مديريه المنصوره</Text>
             </View>
           </View>
-
-          <View style={{ position: "relative", minHeight: 40 }}>
+          <View style={{ position: "relative", minHeight: 80 }}>
             <View
               style={{
                 borderBottom: "1px solid #000",
@@ -330,63 +317,67 @@ const ExtractingLicenseWork = () => {
             >
               <View
                 style={{
+                  textAlign: "center",
                   flex: 1,
-                  justifyContent: "center",
-                  alignItems: "center",
+                  zIndex: 2,
+                  marginTop: 10,
                 }}
               >
                 <Text
                   style={{
+                    textAlign: "center",
+                    fontSize: 11,
+                    width: 100,
+                  }}
+                >
+                  {" "}
+                  |||| ||| |||||||||||| ||||
+                </Text>
+                <Text
+                  style={{
                     borderBottomWidth: 1,
                     borderBottomColor: "#000",
-                    width: 100,
+                    width: 140,
                     textAlign: "center",
                     fontWeight: "bold",
                   }}
                 >
-                  رخصه مزوله مهنة مؤقتة
+                  رخصة استخدم مساحات عامة مؤقتة
                 </Text>
-                <Text
-                  style={[
-                    styles.textRed,
-                    { textAlign: "center", marginTop: 0 },
-                  ]}
-                >
-                  ( سوبر ماركت )
+                <Text style={[styles.textRed]}>
+                  ( استخدم ارضيه الاسواق العامه و الارصفة )
                 </Text>
               </View>
             </View>
           </View>
-          <View
-            style={[
-              styles.borderCard,
-              styles.textRed,
-              styles.textBold,
-              styles.textCenter,
-            ]}
-          >
-            <Text>
-              ملاحظة هامه : هذه لرخصة مؤقته و يحق لمكتب الاشغال العامة و الطرق
-              سحب هذه الرخصة في اي وقت دون تحمل اي مسؤلية تجاه صاحبها اذا دعت
-              الحاجه لذلك
-            </Text>
-          </View>
 
           <View style={{ position: "relative" }}>
+            {/* Background Image */}
+            <Image
+              src="/logo.jpeg"
+              style={{
+                position: "absolute",
+                top: -20,
+                left: 0,
+                width: "100%",
+                height: "120%",
+                opacity: 0.06,
+                objectFit: "cover",
+                zIndex: 0,
+              }}
+            />
+
             {/* detalis user */}
-            
             <View
               style={[
                 styles.borderCard,
                 styles.textRight,
                 styles.flexCol,
-                styles.marginTop,
-
                 { position: "relative", zIndex: 1 },
               ]}
             >
               {/* تقسيم الصفحة لعمودين */}
-              <View style={{ display: "flex", flexDirection: "row", gap: 0 }}>
+              <View style={{ display: "flex", flexDirection: "row", gap: 8 }}>
                 {/* العمود الأيسر للصورة */}
                 <View
                   style={{
@@ -402,7 +393,7 @@ const ExtractingLicenseWork = () => {
                 </View>
 
                 {/* العمود الأيمن للمعلومات */}
-                <View style={{ flex: 2, flexDirection: "column", gap: 2 }}>
+                <View style={{ flex: 2, flexDirection: "column", gap: 8 }}>
                   {/* ...المحتوى الحالي كما هو... */}
                   <View style={styles.flex}>
                     <View style={styles.flex}>
@@ -412,7 +403,7 @@ const ExtractingLicenseWork = () => {
 
                     <View style={styles.flex}>
                       <Text style={styles.textColor}>نوع الرخصه</Text>
-                      <Text>مؤقت</Text>
+                      <Text>تجديد</Text>
                     </View>
                   </View>
 
@@ -434,29 +425,13 @@ const ExtractingLicenseWork = () => {
                   </View>
 
                   <View style={styles.baseFlex}>
-                    <Text style={styles.textColor}>شهره المحل :</Text>
-                    <Text> </Text>
+                    <Text style={styles.textColor}>الاستخدام :</Text>
+                    <Text>(12م) عربيه فلافل </Text>
                   </View>
+
                   <View style={styles.baseFlex}>
                     <Text style={styles.textColor}>العنوان :</Text>
-                    <Text>البريقه بئر احمد الشعب</Text>
-                  </View>
-
-                  <View style={styles.flex}>
-                    <View style={styles.flex}>
-                      <Text style={styles.textColor}>نوع اللوحة</Text>
-                      <Text>لوحةضوئيه</Text>
-                    </View>
-
-                    <View style={styles.flex}>
-                      <Text style={styles.textColor}>مساحه اللوحه :</Text>
-                      <Text>6</Text>
-                    </View>
-
-                    <View style={styles.flex}>
-                      <Text style={styles.textColor}>عدد فتحات</Text>
-                      <Text>3</Text>
-                    </View>
+                    <Text>المعل شارع مدرم</Text>
                   </View>
 
                   <View style={styles.flex}>
@@ -467,13 +442,12 @@ const ExtractingLicenseWork = () => {
 
                     <View style={styles.flex}>
                       <Text style={styles.textColor}>رقم الملف</Text>
-                      <Text>26788787</Text>
+                      <Text>3232322</Text>
                     </View>
                   </View>
                 </View>
               </View>
             </View>
-
 
             {/* Table */}
             <View style={[styles.table, { position: "relative" }]}>
@@ -506,7 +480,7 @@ const ExtractingLicenseWork = () => {
               </View>
 
               {/* Rows */}
-              {feesSection.map((item, index) => (
+              {feeItem.map((item, index) => (
                 <View
                   key={index}
                   style={{
@@ -523,50 +497,6 @@ const ExtractingLicenseWork = () => {
               ))}
 
               {/* Total Row */}
-              <View
-                style={[
-                  styles.totalRow,
-                  {
-                    backgroundColor: "#D9EAF2",
-                  },
-                ]}
-              >
-                <Text style={styles.tableCell}>اجمالي الرسوم</Text>
-                <Text style={styles.tableCellAmount}>22,2000</Text>
-                <Text style={styles.tableCellNote}>
-                  فقط اثنان وعشرون الف من الرسوم
-                </Text>
-              </View>
-              {/* Rows */}
-              {cleaningSection.map((item, index) => (
-                <View
-                  key={index}
-                  style={{
-                    ...styles.tableRow,
-                    borderBottom: "1px solid #cccccc",
-                  }}
-                >
-                  <Text style={[styles.tableCell, styles.yellowColumn]}>
-                    {item.name}
-                  </Text>
-                  <Text style={styles.tableCellAmount}>{item.amount}</Text>
-                  <Text style={[styles.tableCellNote]}>{item.discription}</Text>
-                </View>
-              ))}
-
-              {/* Total Row */}
-              <View
-                style={[
-                  styles.totalRow,
-                  {
-                    backgroundColor: "#D9EAF2",
-                  },
-                ]}
-              >
-                <Text style={styles.tableCell}>اجمالي نظافة</Text>
-                <Text style={styles.tableCellAmount}>788787878</Text>
-                <Text style={styles.tableCellNote}>الف من الرسوم</Text>
-              </View>
               <View
                 style={[
                   styles.totalRow,
@@ -579,6 +509,39 @@ const ExtractingLicenseWork = () => {
                 <Text style={styles.tableCellAmount}>788787878</Text>
                 <Text style={styles.tableCellNote}>الف من الرسوم</Text>
               </View>
+
+              <View
+                style={[
+                  styles.totalRow,
+                  {
+                    backgroundColor: "#C7EAD9",
+                  },
+                ]}
+              >
+                <Text style={styles.tableCell}>المدفوع</Text>
+                <Text style={styles.tableCellAmount}>788787878</Text>
+                <Text style={styles.tableCellNote}>الف من الرسوم</Text>
+              </View>
+              <View
+                style={[
+                  styles.totalRow,
+                  {
+                    backgroundColor: "#EAC7C7",
+                  },
+                ]}
+              >
+                <Text style={styles.tableCell}>المتبقي</Text>
+                <Text style={styles.tableCellAmount}>788787878</Text>
+                <Text style={styles.tableCellNote}>لا شيء</Text>
+              </View>
+            </View>
+
+            <View style={[styles.borderCard, styles.marginTop]}>
+              <Text style={[styles.textRed, styles.textRight, styles.subtitle]}>
+                ملاحظه هامة: هذه الرخصة مؤقتة ويحق لمكتب الاشعال العامة و الطرق
+                سحب هذة الرخصه في اي وقت دون تحمل اي مسؤلية تجاه صاحبهااذا دعت
+                الحاجه لذلك
+              </Text>
             </View>
           </View>
 
@@ -642,4 +605,4 @@ const ExtractingLicenseWork = () => {
   );
 };
 
-export default ExtractingLicenseWork;
+export default ExtractingLicenseWorkStreet;

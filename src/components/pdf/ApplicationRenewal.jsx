@@ -276,7 +276,7 @@ const ApplicationRenewal = ({ formNumber }) => {
             <Text style={{ fontSize: 12, fontWeight: "bold", marginBottom: 3 }}>
               بسم الله الرحمن الرحيم
             </Text>
-            <Image src="/logo.png" style={styles.emblemPlaceholder} />
+            <Image src="/logo.jpeg" style={styles.emblemPlaceholder} />
           </View>
 
           {/* Right */}
@@ -292,7 +292,6 @@ const ApplicationRenewal = ({ formNumber }) => {
         <Text style={styles.title}>
           استماره طلب الحصول علي تراخيص مزاوله مهنه نشاط او تجديد
         </Text>
-      
 
         <View>
           <View style={styles.formRow}>

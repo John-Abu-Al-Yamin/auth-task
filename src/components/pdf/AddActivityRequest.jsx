@@ -271,7 +271,7 @@ const AddActivityRequest = ({ formNumber }) => {
             <Text style={{ fontSize: 12, fontWeight: "bold", marginBottom: 3 }}>
               بسم الله الرحمن الرحيم
             </Text>
-            <Image src="/logo.png" style={styles.emblemPlaceholder} />
+            <Image src="/logo.jpeg" style={styles.emblemPlaceholder} />
           </View>
 
           {/* Right */}
