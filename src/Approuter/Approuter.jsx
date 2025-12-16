@@ -3,10 +3,16 @@ import AppFrom from "../AppFrom";
 import TaxFormPage from "../TaxFormPage";
 import ToasterCompents from "../components/toaster/ToasterCompents";
 import App from "../App";
+import AppHookForm from "../HookForm/AppHookForm";
 
 const router = createBrowserRouter([
     {
         path: "/",
+        element: <AppHookForm />,
+
+    },
+    {
+        path: "/list-form",
         element: <App />,
 
     },
