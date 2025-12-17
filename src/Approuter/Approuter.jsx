@@ -8,7 +8,7 @@ import AppHookForm from "../HookForm/AppHookForm";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <AppHookForm />,
+        element: <App/>,
 
     },
     {
