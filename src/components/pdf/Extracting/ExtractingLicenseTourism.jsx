@@ -75,14 +75,14 @@ const styles = StyleSheet.create({
   },
 
   headerText: {
-    fontSize: 11,
+    fontSize: 7,
     fontWeight: "bold",
     textAlign: "center",
   },
 
   emblemPlaceholder: {
-    width: 40,
-    height: 40,
+    width: 60,
+    height: 50,
     objectFit: "contain",
   },
 
@@ -236,6 +236,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     minWidth: "45%", // عرض ثابت للعناصر
   },
+
+  
 });
 
 // رسوم الرخصة
@@ -274,29 +276,16 @@ const ExtractingLicenseTourism = () => {
             </View>
 
             <View style={{ textAlign: "center", flex: 1, zIndex: 2 }}>
-              <View style={styles.flexGap}>
-                <Text>الرقم الالي </Text>
-                <Text>1234556</Text>
-              </View>
-
-              <View style={styles.flexGap}>
-                <Text>رقم الترخيص</Text>
-                <Text>786786877</Text>
-              </View>
-
-              <View style={styles.flexGap}>
-                <Text>تاريخ اصدار الرخصة</Text>
-                <Text>1/1/2023</Text>
-              </View>
-
-              <View style={styles.flexGap}>
-                <Text>تاريخ ابتداء الرخصة</Text>
-                <Text>1/1/2023</Text>
-              </View>
-
-              <View style={styles.flexGap}>
-                <Text>تاريخ انتهاء الرخصة</Text>
-                <Text>1/1/2023</Text>
+              <Text style={styles.headerText}>
+                REBUBLIC OF YEMEN{"\n"}
+                Ministry of Tourism
+              </Text>
+              <Text>Aden Office</Text>
+              <Text style={styles.headerText}>Al-Mansora District</Text>
+              <View>
+                <Text style={styles.headerText}>Auto No : 459082</Text>
+                <Text style={styles.headerText}>pormit No : A07/01</Text>
+                <Text style={styles.headerText}>issue Data : 2023-01-01</Text>
               </View>
             </View>
 
@@ -325,10 +314,16 @@ const ExtractingLicenseTourism = () => {
                 {"\n"}
                 مديريه - المنصوره
               </Text>
+              <View>
+                <Text>رقم الآلي : 459082</Text>
+                <Text>رقم الرخصة : 459082</Text>
+                <Text>تاريخ الإصدار : 2023-01-01</Text>
+              </View>
             </View>
           </View>
 
           <View style={{ position: "relative", minHeight: 40 }}>
+            {/* الخط */}
             <View
               style={{
                 borderBottom: "1px solid #000",
@@ -341,10 +336,11 @@ const ExtractingLicenseTourism = () => {
               }}
             />
 
+            {/* خلفية اللوجو */}
             <View
               style={{
                 position: "absolute",
-                top: -14,
+                top: -10,
                 left: 0,
                 right: 0,
                 flexDirection: "row",
@@ -355,63 +351,48 @@ const ExtractingLicenseTourism = () => {
             >
               <Image
                 src="/logo.jpeg"
-                style={{ width: "50%", height: 70, objectFit: "contain" }}
+                style={{ width: 120, height: 60, objectFit: "contain" }}
               />
               <Image
                 src="/logo.jpeg"
-                style={{ width: "50%", height: 70, objectFit: "contain" }}
+                style={{ width: 120, height: 60, objectFit: "contain" }}
               />
             </View>
 
+            {/* المحتوى */}
             <View
               style={{
-                position: "relative",
-                zIndex: 2,
-                flex: 1,
-                justifyContent: "center",
+                flexDirection: "row",
                 alignItems: "center",
+                zIndex: 2,
               }}
             >
-              <View
-                style={{
-                  flex: 1,
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+              <View style={{ width: 80, alignItems: "flex-start" }}>
+                <Image
+                  src="/logo.jpeg"
+                  style={{ width: 80, height: 80, objectFit: "contain" }}
+                />
+              </View>
+
+              <View style={{ flex: 1, alignItems: "center" }}>
                 <Text
                   style={{
                     borderBottomWidth: 1,
                     borderBottomColor: "#000",
-                    width: 100,
+                    width: 120,
                     textAlign: "center",
                     fontWeight: "bold",
                   }}
                 >
-                  ترخيص فتح و تشغيل (تجديد)
+                  رخصة مزاولة نشاط سياحي
                 </Text>
-                <Text
-                  style={[
-                    styles.textRed,
-                    { textAlign: "center", marginTop: 0 },
-                  ]}
-                >
-                  ( مركز طبي )
+                <Text style={[styles.textRed, { textAlign: "center" }]}>
+                  ( وكاله او شركه سياحه و سفريات )
                 </Text>
               </View>
-            </View>
-          </View>
-          <View style={{ width: "100%" }}>
-            <Text style={{ textAlign: "right", width: "100%", marginTop: 4 }}>
-              بناء على قانون رقم (60) لعام 1999م بشأن المنشآت الطبية والصحية
-              الخاصة وعلى القانون رقم (26) لعام 2002م بشأن مزاولة المهن الطبية
-            </Text>
 
-            <Text style={{ textAlign: "right", width: "100%", marginTop: 4 }}>
-              وبعد الاطلاع على استمارة المعاينة وثبوت تطابق بيانات المنشأة
-              الهندسية : والفنية مع ما ورد في اللائحة يمنح هذا على التراخيص
-              وفقاً للتفاصيل التالية
-            </Text>
+              <View style={{ width: 80 }} />
+            </View>
           </View>
 
           <View style={{ position: "relative" }}>
@@ -428,107 +409,48 @@ const ExtractingLicenseTourism = () => {
             >
               {/* تقسيم الصفحة لعمودين */}
               <View style={{ display: "flex", flexDirection: "row", gap: 0 }}>
-                {/* العمود الأيسر للصورة */}
-                <View
-                  style={{
-                    flex: 1,
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Image
-                    src="/logo.jpeg"
-                    style={{ width: 80, height: 80, objectFit: "contain" }}
-                  />
-                </View>
-
                 {/* العمود الأيمن للمعلومات */}
                 <View style={{ flex: 2, flexDirection: "column", gap: 4 }}>
                   {/* الاسم - سطر واحد */}
                   <View style={styles.row}>
-                    <Text style={styles.label}>يمنح الترخيص</Text>
+                    <Text style={styles.label}> : نوع الرخصة </Text>
                     <Text style={styles.value}>جون عماد</Text>
                   </View>
 
-                  {/* الجنسية ورقم الترخيص - سطر واحد */}
-                  <View style={styles.inlineRow}>
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>الجنسية:</Text>
-                      <Text style={{ marginRight: 4 }}>اليمن</Text>
-                    </View>
-
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>رقم الترخيص:</Text>
-                      <Text style={{ marginRight: 4 }}>0002468</Text>
-                    </View>
-                  </View>
-
-                  {/* الهوية ورقم الهوية - سطر واحد */}
-                  <View style={styles.inlineRow}>
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>الهوية:</Text>
-                      <Text style={{ marginRight: 4 }}>بطاقة شخصية</Text>
-                    </View>
-
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>رقم الهوية:</Text>
-                      <Text style={{ marginRight: 4 }}>1234ث356</Text>
-                    </View>
-                  </View>
-
-                  {/* المؤهل ومكان المؤهل - سطر واحد */}
-                  <View style={styles.inlineRow}>
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>المؤهل:</Text>
-                      <Text style={{ marginRight: 4 }}>بكالوريوس طب أسنان</Text>
-                    </View>
-
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>مكان المؤهل:</Text>
-                      <Text style={{ marginRight: 4 }}>جامعة عدن</Text>
-                    </View>
-                  </View>
-
-                  {/* تاريخ الإصدار ورقم القيد - سطر واحد */}
-                  <View style={styles.inlineRow}>
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>تاريخ الإصدار:</Text>
-                      <Text style={{ marginRight: 4 }}>2023-01-01</Text>
-                    </View>
-
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>رقم القيد:</Text>
-                      <Text style={{ marginRight: 4 }}>ط/54</Text>
-                    </View>
-                  </View>
-
-                  {/* التخصص والمهنة - سطر واحد */}
-                  <View style={styles.inlineRow}>
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>التخصص:</Text>
-                      <Text style={{ marginRight: 4 }}>طب أسنان</Text>
-                    </View>
-
-                    <View style={styles.inlineItem}>
-                      <Text style={styles.textColor}>المهنة:</Text>
-                      <Text style={{ marginRight: 4 }}>طبيب أسنان</Text>
-                    </View>
-                  </View>
-
-                  {/* العنوان - سطر واحد */}
                   <View style={styles.row}>
-                    <Text style={styles.label}>العنوان</Text>
-                    <Text style={styles.value}>المنصورة - حي عبدالعزيز</Text>
+                    <Text style={styles.label}> : مدة الترخيص </Text>
+                    <Text style={styles.value}>
+                      من 2023-01-01 الى 2023-01-01
+                    </Text>
                   </View>
-
-                  {/* الملاحظة - سطر واحد */}
                   <View style={styles.row}>
-                    <Text style={styles.label}>الملاحظة</Text>
+                    <Text style={styles.label}> : يمنح </Text>
+                    <Text style={styles.value}> جون عماد</Text>
+                  </View>
+                  <View style={styles.row}>
+                    <Text style={styles.label}> : الهوية </Text>
+                    <Text style={styles.value}>
+                      جوز سفر رقم 0999898 صغره بيتاريخ 2023-01-01
+                    </Text>
+                  </View>
+                  <View style={styles.row}>
+                    <Text style={styles.label}> : رخصه لمنشاة </Text>
                     <Text style={styles.value}></Text>
+                  </View>
+                  <View style={styles.row}>
+                    <Text style={styles.label}> : والتي وضعها </Text>
+                    <Text style={styles.value}>رئيسي مفرد</Text>
+                  </View>
+                  <View style={styles.row}>
+                    <Text style={styles.label}> : و الواقعه في </Text>
+                    <Text style={styles.value}>
+                      المنصوره القاهره بجانب المؤسسه مجموعه 56 محل 3
+                    </Text>
                   </View>
                 </View>
               </View>
             </View>
+
             {/* Table */}
             <View style={[styles.table, { position: "relative" }]}>
               {/* Background Image for Table */}
@@ -635,66 +557,47 @@ const ExtractingLicenseTourism = () => {
               </View>
             </View>
           </View>
-          <Text style={styles.marginTop}>
-             علي ان يلتزم المصرح له بالترخيص  بالقوانين و النظم واللوائح المنظمة لعمل المنشات الطبية و الصحية الخاصة السارية في الجمهورية
-          </Text>
 
           <View style={styles.flex}>
             <Text
               style={{
                 borderBottomWidth: 1,
                 borderBottomColor: "#000",
-                width: 120,
+                width: 100,
                 textAlign: "center",
                 // marginLeft: 80,
                 marginTop: 16,
                 fontWeight: "bold",
               }}
             >
-              رئيس قسم المنشآت الطبية و الصحية الخاصة
-              {"\n"} م/المنصورة
+              مسوؤل التراخيص و التصنيف
             </Text>
             <Text
               style={{
                 borderBottomWidth: 1,
                 borderBottomColor: "#000",
-                width: 120,
+                width: 100,
                 textAlign: "center",
                 // marginLeft: 80,
                 marginTop: 16,
                 fontWeight: "bold",
               }}
             >
-              مدير مكتب الصحة العامة و السكان مديرية المنصورة
-              {"\n"} م/عدن
+              مدير الشون السياحية
             </Text>
+
             <Text
               style={{
                 borderBottomWidth: 1,
                 borderBottomColor: "#000",
-                width: 120,
+                width: 100,
                 textAlign: "center",
                 // marginLeft: 80,
                 marginTop: 16,
                 fontWeight: "bold",
               }}
             >
-              مدير اداره المنشات الطبية و الصحية الخاصة
-              {"\n"} م/عدن
-            </Text>
-            <Text
-              style={{
-                borderBottomWidth: 1,
-                borderBottomColor: "#000",
-                width: 150,
-                textAlign: "center",
-                // marginLeft: 80,
-                marginTop: 16,
-                fontWeight: "bold",
-              }}
-            >
-              مدير عام مكتب الصحة العامة و السكان
-              {"\n"} م/عدن
+              المدير العام
             </Text>
           </View>
 
@@ -742,5 +645,4 @@ const ExtractingLicenseTourism = () => {
   );
 };
 
-
-export default ExtractingLicenseTourism
+export default ExtractingLicenseTourism;

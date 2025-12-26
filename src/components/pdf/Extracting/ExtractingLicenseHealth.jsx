@@ -265,11 +265,11 @@ const ExtractingLicenseHealth = () => {
           <View style={styles.header}>
             <View style={styles.backgroundsContainer}>
               <View style={styles.backgroundRight}>
-                <Image src="/logo.jpeg" style={styles.backgroundImage} />
+                <Image src="/logo.png" style={styles.backgroundImage} />
               </View>
 
               <View style={styles.backgroundLeft}>
-                <Image src="/logo.jpeg" style={styles.backgroundImage} />
+                <Image src="/logo.png" style={styles.backgroundImage} />
               </View>
             </View>
 

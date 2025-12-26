@@ -15,6 +15,8 @@ import ExtractingLicenseculture from "./components/pdf/Extracting/ExtractingLice
 import ExtractingLicenseHealth from "./components/pdf/Extracting/ExtractingLicenseHealth";
 import MedicalLicenseRequest from "./components/pdf/MedicalLicenseRequest";
 import ExtractingLicenseTourism from "./components/pdf/Extracting/ExtractingLicenseTourism";
+import LicenseStopDeposit from "./components/pdf/LicenseCashDeposit/LicenseStopDeposit";
+import LicenseAddActvieDeposit from "./components/pdf/LicenseCashDeposit/LicenseAddActvieDeposit";
 
 const App = () => {
   const [showPdf, setShowPdf] = useState(false);
@@ -63,7 +65,7 @@ const App = () => {
 
             <div className="flex-1 mt-2">
               <PDFViewer className="w-full h-full">
-                <ExtractingLicenseTourism    />
+                <ExtractingLicenseHealth />
               </PDFViewer>
             </div>
           </div>
